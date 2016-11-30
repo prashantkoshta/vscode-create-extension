@@ -4,7 +4,7 @@ This is command line help for developer to create and publish new VS Code Extens
 
 ## Features
 
-Run heroku command form vs code.
+Run vscode create & publish extension command form vs code.
 
 ## Requirements
 
