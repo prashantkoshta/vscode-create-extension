@@ -1,4 +1,4 @@
-# heroku-command README
+# vscode-create-extension
 
 This is command line help for developer to create and publish new VS Code Extension by command line.
 
@@ -9,10 +9,12 @@ Run heroku command form vs code.
 ## Requirements
 
 You have to installed following software before use of this.
+
 1. vsce
 ```bash
 npm install -g vsce
-````
+```
+
 2. yo
 ```bash
 npm install -g yo generator-code
