@@ -1,0 +1,88 @@
+{
+    "name": "vscode-create-extension",
+    "displayName": "vscode-create-extension",
+    "description": "Create project & publish vscode extesion by vscode commandline.",
+    "icon": "images/vscodeextIcon.svg",
+    "version": "0.0.1",
+    "publisher": "pkosta2005",
+    "license": "SEE LICENSE IN LICENSE.md",
+	"bugs": {
+		"url": "https://github.com/prashantkoshta/vscode-create-extension/issues",
+		"email": "pkosta2005@outlook.com"
+	},
+	"homepage": "https://github.com/prashantkoshta/vscode-create-extension/blob/master/README.md",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/prashantkoshta/vscode-create-extension.git"
+	},
+	"categories": [
+		"Keymaps", "Languages", "Other"
+	],
+    "engines": {
+        "vscode": "^1.5.0"
+    },
+    "activationEvents": [
+        "onCommand:vsext.generateNewExtension",
+        "onCommand:vsext.vscePublish",
+        "onCommand:vsext.vsceCreatePublisher",
+        "onCommand:vsext.vsceLogin",
+        "onCommand:vsext.vscePublishbyToken",
+        "onCommand:vsext.vscePublishMinor",
+        "onCommand:vsext.vscePublishVersion",
+        "onCommand:vsext.vscePackage",
+        "onCommand:vsext.installExtension"
+    ],
+    "main": "./out/src/vscodeextension",
+    "contributes": {
+        "commands": [
+            {
+            "command": "vsext.generateNewExtension",
+            "title": "yo code"
+            },
+            {
+            "command": "vsext.vscePublish",
+            "title": "vsce publish"
+            },
+            {
+            "command": "vsext.vsceCreatePublisher",
+            "title": "vsce create-publisher <PUBLISHER_NAME>"
+            },
+            {
+            "command": "vsext.vsceLogin",
+            "title": "vsce login <PUBLISHER_NAME>"
+            },
+            {
+            "command": "vsext.vscePublishbyToken",
+            "title": "vsce publish -p <TOKEN>"
+            },
+            {
+            "command": "vsext.vscePublishMinor",
+            "title": "vsce publish minor"
+            },
+            {
+            "command": "vsext.vscePublishVersion",
+            "title": "vsce publish <VERSION>"
+            },
+            {
+            "command": "vsext.vscePackage",
+            "title": "vsce package"
+            },
+            {
+            "command": "vsext.installExtension",
+            "title": "code --install-extension <EXTENSION_PACKAGE(*.vsix)>"
+            }
+        ]
+    },
+    "scripts": {
+        "vscode:prepublish": "tsc -p ./",
+        "compile": "tsc -watch -p ./",
+        "postinstall": "node ./node_modules/vscode/bin/install"
+    },
+    "devDependencies": {
+        "typescript": "^2.0.3",
+        "vscode": "^1.0.0",
+        "mocha": "^2.3.3",
+        "@types/node": "^6.0.40",
+        "@types/mocha": "^2.2.32"
+    }
+}
